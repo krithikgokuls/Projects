@@ -1,0 +1,14 @@
+Create a Solidity smart contract using a code editor.
+Here's a simple example of a Solidity smart contract:
+
+// SimpleStorage.sol
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SimpleStorage {
+    uint256 public data;
+
+    function setData(uint256 _data) public {
+        data = _data;
+    }
+}
