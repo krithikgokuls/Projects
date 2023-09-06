@@ -19,3 +19,27 @@ Here's a simplified HTML/JavaScript example to interact with the Smart Contract:
     <script src="app.js"></script>
 </body>
 </html>
+
+// app.js
+const Web3 = require('web3');
+const contractABI = [...] // ABI of your deployed contract
+const contractAddress = '0x...'; // Address of your deployed contract
+const web3 = new Web3('https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID');
+
+const contract = new web3.eth.Contract(contractABI, contractAddress);
+
+async function getData() {
+    const data = await contract.methods.data().call();
+    document.getElementById('data').textContent = data;
+}
+
+async function setData() {
+    const newData = document.getElementById('newData').value;
+    const accounts = await web3.eth.getAccounts();
+    
+    await contract.methods.setData(newData).send({ from: accounts[0] });
+    getData();
+}
+
+getData();
+
