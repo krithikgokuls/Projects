@@ -1,0 +1,21 @@
+Develop the Frontend:
+
+Use HTML, CSS, and JavaScript (or a JavaScript framework like React) for the frontend.
+Use Web3.js or ethers.js library to interact with the Ethereum blockchain.
+Here's a simplified HTML/JavaScript example to interact with the Smart Contract:
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dApp Example</title>
+</head>
+<body>
+    <h1>Simple Storage dApp</h1>
+    <p>Current Data: <span id="data"></span></p>
+    <input type="number" id="newData" placeholder="Enter new data">
+    <button onclick="setData()">Set Data</button>
+    <script src="app.js"></script>
+</body>
+</html>
